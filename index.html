@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Solutions - Software Development Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Responsive hamburger menu styles - these are attribute selectors and media queries,
+           not simple class definitions, and are fine to keep for functionality with Tailwind CDN. */
+        #menu-button[aria-expandead="true"] + #mobile-menu {
+            display: block;
+        }
+         #menu-button[aria-expanded="false"] + #mobile-menu {
+            display: none;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            #mobile-menu {
+                display: flex !important; /* Ensure it's flex on md and up for proper alignment */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 font-inter">
+
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 md:flex md:justify-between md:items-center">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white">
+                    <span class="text-sky-400">Cotillo</span>Software
+                </a>
+                <div class="md:hidden">
+                    <button type="button" id="menu-button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16M4 12h16M4 18h16" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6M6 6l12 12" style="display:none;"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-1 mt-4 md:mt-0">
+                <a href="#home" class="text-gray-300 hover:bg-gray-700 hover:text-white py-2 px-3 rounded-md transition-colors duration-300 ease-in-out">Inicio</a>
+                <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white py-2 px-3 rounded-md transition-colors duration-300 ease-in-out">Sobre Nosotros</a>
+                <a href="#strengths" class="text-gray-300 hover:bg-gray-700 hover:text-white py-2 px-3 rounded-md transition-colors duration-300 ease-in-out">Nuestras Fortalezas</a>
+                <a href="#process" class="text-gray-300 hover:bg-gray-700 hover:text-white py-2 px-3 rounded-md transition-colors duration-300 ease-in-out">Nuestro Proceso</a>
+                <a href="#contact" class="inline-block py-2 px-4 rounded-md font-semibold text-center transition-colors duration-300 ease-in-out bg-sky-600 text-white hover:bg-sky-700 ml-0 md:ml-2 mt-2 md:mt-0">Contáctanos</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="relative py-20 md:py-32 bg-gray-900">
+        <div class="absolute inset-0">
+            <img src="/hero-2.webp" alt="Fondo de Espacio de Trabajo Moderno" class="w-full h-full object-cover opacity-30 object-top" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/1F2937/FFFFFF?text=Imagen+No+Encontrada';">
+        </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Construyendo <span class="text-sky-400">Excelencia Digital.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Somos un equipo apasionado de desarrolladores de software, diseñadores y estrategas dedicados a crear soluciones innovadoras y escalables que impulsen su negocio hacia adelante.
+            </p>
+            <a href="#contact" class="inline-block py-3 px-8 text-lg rounded-lg font-semibold text-center transition-colors duration-300 ease-in-out bg-sky-600 text-white hover:bg-sky-700">Obtén una Cotización Gratis</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-6 text-center text-white">Acerca de <span class="text-sky-400">Cotillo</span>Software</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="/developers.webp" alt="Colaboración del Equipo" class="rounded-xl shadow-2xl w-full aspect-video object-top object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/374151/FFFFFF?text=Imagen+No+Encontrada';">
+                </div>
+                <div class="text-gray-300 text-lg">
+                    <p class="mb-4">
+                        En CotilloSoftware, creemos que la tecnología puede transformar los negocios. Nuestra misión es empoderar a las organizaciones con software personalizado que no solo resuelve problemas, sino que también crea nuevas oportunidades.
+                    </p>
+                    <p class="mb-4">
+                        Nuestro equipo está formado por profesionales experimentados con experiencia en una amplia gama de tecnologías e industrias. Nos enorgullece nuestro enfoque colaborativo, trabajando estrechamente con nuestros clientes para comprender sus desafíos únicos y ofrecer soluciones que superen sus expectativas.
+                    </p>
+                    <p>
+                        No solo escribimos código; somos <span class="font-semibold text-sky-400">socios estratégicos</span> comprometidos con su éxito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strengths" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-6 text-center text-white">Nuestras <span class="text-sky-400">Fortalezas</span></h2>
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg text-center">
+                    <div class="mx-auto text-4xl mb-6 rounded-full h-24 w-24 object-cover bg-sky-500 text-white justify-center items-center flex">
+                        <i class="las la-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Equipo Experimentado</h3>
+                    <p class="text-gray-400">Nuestros desarrolladores, diseñadores y gerentes de proyecto aportan años de experiencia en la industria y un historial comprobado de éxitos.</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 rounded-full h-24 w-24 object-cover text-4xl bg-sky-500 text-white justify-center items-center flex">
+                        <i class="las la-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Soluciones Innovadoras</h3>
+                    <p class="text-gray-400">Aprovechamos las últimas tecnologías y el pensamiento creativo para construir software de vanguardia adaptado a sus necesidades específicas.</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 rounded-full h-24 w-24 object-cover text-4xl bg-sky-500 text-white justify-center items-center flex">
+                        <i class="las la-user-friends"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Enfoque Centrado en el Cliente</h3>
+                    <p class="text-gray-400">Sus objetivos son nuestra prioridad. Mantenemos una comunicación transparente y nos adaptamos a sus requisitos en evolución.</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 rounded-full h-24 w-24 object-cover text-4xl bg-sky-500 text-white justify-center items-center flex">
+                        <i class="las la-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Ágiles y Transparentes</h3>
+                    <p class="text-gray-400">Seguimos metodologías ágiles, garantizando flexibilidad, actualizaciones periódicas y una visión clara del progreso del proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-6 text-center text-white">Nuestro proceso de <span class="text-sky-400">desarrollo</span></h2>
+            <div class="relative">
+                <div class="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-sky-600 transform -translate-x-1/2"></div>
+
+                <div class="mb-12 md:flex md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-right">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">1. Descubrimiento y Planificación</h3>
+                            <p class="text-gray-300">Comenzamos comprendiendo claramente sus objetivos, audiencia y requisitos técnicos. Realizamos investigación de mercado y análisis de competidores para crear un plan detallado.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                        <img src="/discovery.webp" alt="Discovery Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+
+                <div class="mb-12 md:flex md:flex-row-reverse md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-left">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">2. Diseño & Prototipado</h3>
+                            <p class="text-gray-300">Nuestros expertos en UI/UX crean diseños intuitivos y atractivos. Creamos wireframes, mockups y prototipos interactivos para visualizar la experiencia del usuario y recopilar tu retroalimentación antes de comenzar el desarrollo.</p>
+                        </div>
+                    </div>
+                     <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                         <img src="/ux.webp" alt="Design Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+
+                <div class="mb-12 md:flex md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-right">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">3. Desarrollo</h3>
+                            <p class="text-gray-300">Nuestros desarrolladores escriben código limpio, eficiente y escalable, siguiendo prácticas y metodologías ágiles. Proporcionamos actualizaciones y demos regulares a lo largo del ciclo de desarrollo.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                        <img src="/development.webp" alt="Development Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+
+                <div class="mb-12 md:flex md:flex-row-reverse md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-left">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">4. Pruebas y Control de Calidad</h3>
+                            <p class="text-gray-300">Realizamos pruebas rigurosas en cada etapa para garantizar una aplicación sin errores, de alto rendimiento y segura. Realizamos pruebas funcionales, de usabilidad, rendimiento y seguridad.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                         <img src="/qa.webp" alt="Testing Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+
+                <div class="mb-12 md:flex md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-right">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">5. Despliegue & Lanzamiento</h3>
+                            <p class="text-gray-300">Una vez que el software pasa todas las verificaciones de calidad y recibe su aprobación, gestionamos el proceso de despliegue a su entorno elegido, asegurando un lanzamiento suave.</p>
+                        </div>
+                    </div>
+                     <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                        <img src="/deployment.webp" alt="Deployment Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover object-top" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+
+                 <div class="md:flex md:flex-row-reverse md:items-center md:justify-between">
+                    <div class="md:w-5/12">
+                        <div class="bg-gray-800 rounded-xl p-8 shadow-lg md:text-left">
+                            <h3 class="text-2xl font-semibold text-sky-400 mb-3">6. Soporte & Mantenimiento</h3>
+                            <p class="text-gray-300">Nuestra relación no termina con el lanzamiento. Ofrecemos soporte y mantenimiento continuo para asegurar que su software permanezca óptimo y evolucione con las necesidades de su negocio.</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-2/12 items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-sky-600 border-4 border-gray-800 shadow-lg"></div>
+                    </div>
+                    <div class="md:w-5/12 mt-6 md:mt-0">
+                         <img src="/support.webp" alt="Support Phase" class="rounded-xl shadow-lg w-full aspect-video object-cover object-top" onerror="this.onerror=null;this.src='https://placehold.co/500x300/1F2937/FFFFFF?text=Image';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 py-12">
+            <h2 class="text-4xl font-bold mb-10 text-center text-white">Conecta con <span class="text-sky-400">Nosotros directamente</span></h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-gray-300 mb-8 text-lg md:text-xl leading-relaxed px-4 sm:px-0">
+                    ¿Tienes un proyecto en mente, una pregunta o solo quieres discutir una idea? Estamos a solo un mensaje de distancia!
+                    Contáctanos directamente en WhatsApp para una conversación rápida y personal.
+                </p>
+                <a href="https://wa.me/51970001095" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-3 px-8 md:py-4 md:px-10 text-lg md:text-xl rounded-lg font-semibold text-white transition-colors duration-300 ease-in-out bg-green-500 hover:bg-green-600 shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 mr-2 md:mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.258 4.742A9.96 9.96 0 0012 2C6.477 2 2 6.477 2 12c0 1.843.502 3.566 1.389 5.057L2 22l5.054-1.388A9.949 9.949 0 0012 22c5.523 0 10-4.477 10-10a9.956 9.956 0 00-2.742-7.258zM12 20.5c-1.69 0-3.283-.468-4.641-1.296l-.335-.198-3.446.942.942-3.445-.198-.335A8.453 8.453 0 013.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5c0 4.687-3.813 8.5-8.5 8.5zm4.519-6.986c-.246-.123-1.454-.717-1.68-.8-.226-.082-.39-.123-.553.123-.164.246-.635.8-.78 1.028-.145.164-.289.185-.535.062-.246-.123-.965-.37-1.839-1.134-.68-.59-1.134-1.335-1.257-1.561-.123-.226 0-.347.11-.458.1-.1.226-.246.34-.37.11-.123.144-.205.226-.347s.041-.267 0-.39c-.04-.123-.553-1.315-.758-1.792-.205-.488-.41-.406-.554-.406h-.488c-.164 0-.429.062-.655.308-.226.246-.863.842-.863 2.053s.884 2.38.988 2.543c.104.164 1.745 2.654 4.228 3.72.59.246 1.048.39 1.412.513.576.185.906.164 1.236-.082.37-.289 1.454-1.495 1.66-2.033.205-.537.205-.988.145-1.07-.062-.123-.226-.185-.472-.308z"/>
+                    </svg>
+                    Escríbenos en WhatsApp
+                </a>
+                <p class="mt-8 text-sm text-gray-400">
+                    Da click en el botón para iniciar una conversación. ¡Nos encantaría conocer de tu proyecto!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p class="mb-4">
+                <a href="#" class="text-xl font-bold text-white"><span class="text-sky-400">Cotillo</span>Software</a>
+            </p>
+            <p class="mb-2">Cale Colon 627, Miraflores, Lima</p>
+            <p class="mb-4">Email: <a href="mailto:contact@cotillo.dev" class="hover:text-sky-400 transition-colors duration-300 ease-in-out">contact@cotillo.dev</a> | Phone: <a href="tel:+51970001095" class="hover:text-sky-400 transition-colors duration-300 ease-in-out">+51970001095</a></p>
+            <!-- <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors duration-300 ease-in-out">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors duration-300 ease-in-out">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors duration-300 ease-in-out">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.154 6.839 9.491.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.201 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.308.678.92.678 1.853 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                 <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors duration-300 ease-in-out">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+            </div> -->
+            <p class="text-sm">&copy; <span id="currentYear"></span> CotilloSoftware. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // If it's a mobile menu link, close the menu
+                    const menuButton = document.getElementById('menu-button');
+                    // Check if the menu is currently expanded (visible)
+                    if (menuButton.getAttribute('aria-expanded') === 'true') {
+                        menuButton.click(); // Simulate a click to toggle and close it
+                    }
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu'); // Not strictly needed here if using CSS attribute selectors
+        const openIconPath = menuButton.querySelector('svg path[d="M4 6h16M4 12h16M4 18h16"]');
+        const closeIconPath = menuButton.querySelector('svg path[d="M6 18L18 6M6 6l12 12"]');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            // The CSS attribute selectors will handle showing/hiding #mobile-menu
+
+            // Toggle SVG icons
+            if (!isExpanded) { // If it was closed, now it's open
+                openIconPath.style.display = 'none';
+                closeIconPath.style.display = 'block';
+            } else { // If it was open, now it's closed
+                openIconPath.style.display = 'block';
+                closeIconPath.style.display = 'none';
+            }
+        });
+
+        // Ensure menu visibility and icon state is correctly handled on resize
+        window.addEventListener('resize', () => {
+            const isDesktop = window.innerWidth >= 768; // md breakpoint in Tailwind
+            
+            if (isDesktop) {
+                 // On desktop, menu should be visible (handled by CSS @media)
+                 // and hamburger button should not show open/close icons as it's hidden
+                 menuButton.setAttribute('aria-expanded', 'true'); // Keep menu logic consistent
+                 openIconPath.style.display = 'block'; // Default state for hidden button
+                 closeIconPath.style.display = 'none';
+            } else {
+                // On mobile, respect the current expanded state for icons
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    openIconPath.style.display = 'none';
+                    closeIconPath.style.display = 'block';
+                } else {
+                    openIconPath.style.display = 'block';
+                    closeIconPath.style.display = 'none';
+                }
+            }
+        });
+
+        // Initial check for icon display on load
+        // Based on initial aria-expanded state (which should be false for mobile)
+        if (window.innerWidth < 768) {
+            if (menuButton.getAttribute('aria-expanded') === 'true') {
+                openIconPath.style.display = 'none';
+                closeIconPath.style.display = 'block';
+            } else {
+                openIconPath.style.display = 'block';
+                closeIconPath.style.display = 'none';
+            }
+        } else {
+            // On desktop, ensure hamburger icons are reset (button itself is hidden by md:hidden)
+            openIconPath.style.display = 'block';
+            closeIconPath.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
